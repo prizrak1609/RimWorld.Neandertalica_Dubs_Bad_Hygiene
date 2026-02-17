@@ -2,13 +2,21 @@
 <ModMetaData>
     <name>Neandertallica + Dubs Bad Hygiene</name>
     <author>Geel</author>
+	<url>https://github.com/prizrak1609/RimWorld.Neandertalica_Dubs_Bad_Hygiene</url>
     <supportedVersions>
 		<li>1.6</li>
     </supportedVersions>
 	<packageId>Geel.NeandertallicaDBS</packageId>
     <description>
-	Adds pit with water so colonists could drink and wash themself on Animal colony level.
+Adds pit with water so colonists could drink and wash themself on Animal colony level.
+	
+[h3]If you want to add or change something:[/h3]
+[list]
+[*] Contribute on GitHub: [url=https://github.com/prizrak1609/RimWorld.Neandertalica_Dubs_Bad_Hygiene]Neandertallica + Dubs Bad Hygiene[/url]
+[*] Write in a comments
+[/list]
 	</description>
+	<modVersion IgnoreIfNoMatchingField="True">1.0.0</modVersion>
 	<modDependencies>
 		<li>
 			<packageId>titaniusrex.neandertallica</packageId>

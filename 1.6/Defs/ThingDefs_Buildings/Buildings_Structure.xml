@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	
+	<ThingDef Name="NeandertallWaterPit" ParentName="BasedWaterWell">
+		<defName>N_WaterPit</defName>
+		<label>water pit</label>
+		<description>Pit of water</description>
+		<graphicData>
+			<texPath>Things/Building/Neandertallic/NeandertralWaterPit/NeandertalWaterPit</texPath>
+		</graphicData>
+		<uiIconPath>Things/Building/Neandertallic/NeandertralWaterPit/NeandertalWaterPit</uiIconPath>
+		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
+			<Flammability>0.3</Flammability>
+		</statBases>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+		<terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
+		<holdsRoof>false</holdsRoof>
+		<designationCategory>N_Neandertalo</designationCategory>
+		<uiOrder>10</uiOrder>
+		<staticSunShadowHeight>0</staticSunShadowHeight>
+		<blockLight>false</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<fertility>0</fertility>
+		<costList Inherit="False">
+			<WoodLog>4</WoodLog>
+        </costList>
+		<damageMultipliers>
+			<li>
+				<damageDef>Bomb</damageDef>
+				<multiplier>4</multiplier>
+			</li>
+			<li>
+				<damageDef>Thump</damageDef>
+				<multiplier>2</multiplier>
+			</li>
+		</damageMultipliers>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<!--that's the only way it works with Alpha Memes-->
+	<ThingStyleDef>
+		<defName>N_WaterPitStyle</defName>
+		<graphicData>
+			<texPath>Things/Building/Neandertallic/NeandertralWaterPit/NeandertalWaterPit</texPath>
+		</graphicData>
+	</ThingStyleDef>
+	
+</Defs>

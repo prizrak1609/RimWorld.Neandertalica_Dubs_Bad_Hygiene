@@ -13,6 +13,7 @@
 		<statBases>
 			<MaxHitPoints>30</MaxHitPoints>
 			<Flammability>0.3</Flammability>
+			<WorkToBuild>6000</WorkToBuild>
 		</statBases>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>

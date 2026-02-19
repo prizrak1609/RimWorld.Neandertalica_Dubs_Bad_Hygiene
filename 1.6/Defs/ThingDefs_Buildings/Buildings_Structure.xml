@@ -2,7 +2,7 @@
 
 <Defs>
 	
-	<ThingDef Name="NeandertallWaterPit" ParentName="BasedWaterWell">
+	<ThingDef Name="NeandertallWaterPit" ParentName="BasedHygieneMom">
 		<defName>N_WaterPit</defName>
 		<label>water pit</label>
 		<description>Pit of water</description>
@@ -10,14 +10,41 @@
 			<texPath>Things/Building/Neandertallic/NeandertralWaterPit/NeandertalWaterPit</texPath>
 		</graphicData>
 		<uiIconPath>Things/Building/Neandertallic/NeandertralWaterPit/NeandertalWaterPit</uiIconPath>
+		<tickerType>Normal</tickerType>
+		<category>Building</category>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<blockWind>false</blockWind>
+		<castEdgeShadows>false</castEdgeShadows>
+		<pathCost>60</pathCost>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>4</costStuffCount>
+		<placeWorkers>
+			<li>DubsBadHygiene.PlaceWorker_WaterGrid</li>
+			<li>DubsBadHygiene.PlaceWorker_SewageGrid</li>
+			<li>PlaceWorker_InvalidOverSubstructure</li>
+		</placeWorkers>
+		<comps>
+			<li Class="DubsBadHygiene.CompProperties_WaterInlet">
+				<compClass>DubsBadHygiene.CompBaseWell</compClass>
+				<Radius>7.9</Radius>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
 		<statBases>
 			<MaxHitPoints>30</MaxHitPoints>
 			<Flammability>0.3</Flammability>
-			<WorkToBuild>6000</WorkToBuild>
+			<WorkToBuild>2000</WorkToBuild>
 		</statBases>
-		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
-		<terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<defaultStuff>WoodLog</defaultStuff>
 		<holdsRoof>false</holdsRoof>
 		<designationCategory>N_Neandertalo</designationCategory>
 		<uiOrder>10</uiOrder>
@@ -25,19 +52,6 @@
 		<blockLight>false</blockLight>
 		<canOverlapZones>false</canOverlapZones>
 		<fertility>0</fertility>
-		<costList Inherit="False">
-			<WoodLog>4</WoodLog>
-        </costList>
-		<damageMultipliers>
-			<li>
-				<damageDef>Bomb</damageDef>
-				<multiplier>4</multiplier>
-			</li>
-			<li>
-				<damageDef>Thump</damageDef>
-				<multiplier>2</multiplier>
-			</li>
-		</damageMultipliers>
 	</ThingDef>
 
 </Defs>

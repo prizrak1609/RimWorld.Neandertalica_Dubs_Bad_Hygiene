@@ -30,7 +30,13 @@ namespace Neandertalica_DBH
             Pawn pawn = this.InteractionCell.GetFirstPawn(this.Map);
             if (pawn != null && !pawn.Downed && !pawn.Dead && pawn.CurJob != null && pawn.CurJob.targetA.Thing == this)
             {
-                storage.WaterStorage -= waterPit.Props.WaterPerUse;
+                if (storage != null)
+                {
+                    storage.WaterStorage -= waterPit.Props.WaterPerUse;
+                } else
+                {
+                    Log.Error("Neandertalica_DBH: WaterPit has no CompWaterStorage.");
+                }
             }
         }
 
@@ -52,7 +58,15 @@ namespace Neandertalica_DBH
 
         public override AcceptanceReport Working(float WaterUsed = 0)
         {
-            return storage.WaterStorage > 0 || base.Working(WaterUsed);
+            bool hasWater = false;
+            if (storage != null)
+            {
+                hasWater = storage.WaterStorage > 0;
+            } else
+            {
+                Log.Error("Neandertalica_DBH: WaterPit has no CompWaterStorage.");
+            }
+            return hasWater || base.Working(WaterUsed);
         }
     }
 }

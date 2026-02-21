@@ -36,17 +36,18 @@ namespace Neandertalica_DBH
 
         public void PostSpawnSetup(Map map, bool respawningAfterLoad)
         {
-            if (respawningAfterLoad)
+            if (waterPit == null)
             {
-                return;
+                waterPit = GetComp<WaterPitThingComp>();
             }
 
-            waterPit = GetComp<WaterPitThingComp>();
-
-            storage = GetComp<CompWaterStorage>();
-            storage.Props.WaterStorageCap = waterPit.Props.Capacity;
-            storage.DrainTank = false;
-            storage.WaterStorage = waterPit.Props.Capacity;
+            if (storage == null)
+            {
+                storage = GetComp<CompWaterStorage>();
+                storage.Props.WaterStorageCap = waterPit.Props.Capacity;
+                storage.DrainTank = false;
+                storage.WaterStorage = waterPit.Props.Capacity;
+            }
         }
 
         public override AcceptanceReport Working(float WaterUsed = 0)

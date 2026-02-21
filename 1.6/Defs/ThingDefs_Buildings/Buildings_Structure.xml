@@ -8,7 +8,11 @@
 		<description>Pit of water</description>
 		<graphicData>
 			<texPath>Things/Building/Neandertallic/NeandertralWaterPit/NeandertalWaterPit</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+			<drawRotated>false</drawRotated>
 		</graphicData>
+		<thingClass>Neandertalica_DBH.WaterPit</thingClass>
 		<uiIconPath>Things/Building/Neandertallic/NeandertralWaterPit/NeandertalWaterPit</uiIconPath>
 		<tickerType>Normal</tickerType>
 		<category>Building</category>
@@ -26,13 +30,24 @@
 		<costStuffCount>4</costStuffCount>
 		<placeWorkers>
 			<li>DubsBadHygiene.PlaceWorker_WaterGrid</li>
-			<li>DubsBadHygiene.PlaceWorker_SewageGrid</li>
 			<li>PlaceWorker_InvalidOverSubstructure</li>
 		</placeWorkers>
 		<comps>
-			<li Class="DubsBadHygiene.CompProperties_WaterInlet">
-				<compClass>DubsBadHygiene.CompBaseWell</compClass>
-				<Radius>7.9</Radius>
+			<li Class="DubsBadHygiene.CompProperties_Pipe">
+				<mode>Sewage</mode>
+			</li>
+			<li Class="DubsBadHygiene.CompProperties_WaterStorage">
+				<!-- <WaterStorageCap>0</WaterStorageCap> it is overriden by water pit Capacity -->
+				<AutoGenRate>0.6</AutoGenRate>
+				<Tickrate>60</Tickrate>
+				<Auto>true</Auto>
+				<AutoOnRain>false</AutoOnRain>
+			</li>
+			<li Class="Neandertalica_DBH.CompProperties_WaterPit">
+				<Capacity>500</Capacity>
+				<Radius>7</Radius>
+				<Deep>false</Deep>
+				<Piped>true</Piped>
 			</li>
 			<li Class="CompProperties_Forbiddable"/>
 		</comps>

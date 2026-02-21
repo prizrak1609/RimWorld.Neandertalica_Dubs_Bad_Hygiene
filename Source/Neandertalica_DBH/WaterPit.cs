@@ -18,6 +18,9 @@ namespace Neandertalica_DBH
         public override FixtureType fixture => FixtureType.Basin;
         public override bool DrawBrokenPipe => false;
 
+        private int postTickErrorKey = 0;
+        private int workingErrorKey = 0;
+
         private WaterPitThingComp waterPit;
         private CompWaterStorage storage;
 
@@ -27,6 +30,11 @@ namespace Neandertalica_DBH
 
         public void PostTick()
         {
+            if (base.ParentHolder is MinifiedThing)
+            {
+                return;
+            }
+
             Pawn pawn = this.InteractionCell.GetFirstPawn(this.Map);
             if (pawn != null && !pawn.Downed && !pawn.Dead && pawn.CurJob != null && pawn.CurJob.targetA.Thing == this)
             {
@@ -35,7 +43,7 @@ namespace Neandertalica_DBH
                     storage.WaterStorage -= waterPit.Props.WaterPerUse;
                 } else
                 {
-                    Log.Error("Neandertalica_DBH: WaterPit has no CompWaterStorage.");
+                    Log.ErrorOnce("Neandertalica_DBH: WaterPit has no CompWaterStorage.", postTickErrorKey);
                 }
             }
         }
@@ -64,7 +72,7 @@ namespace Neandertalica_DBH
                 hasWater = storage.WaterStorage > 0;
             } else
             {
-                Log.Error("Neandertalica_DBH: WaterPit has no CompWaterStorage.");
+                Log.ErrorOnce("Neandertalica_DBH: WaterPit has no CompWaterStorage.", workingErrorKey);
             }
             return hasWater || base.Working(WaterUsed);
         }

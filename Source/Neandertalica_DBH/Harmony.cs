@@ -17,7 +17,6 @@ namespace Neandertalica_DBH
     {
         static HarmonyPatches()
         {
-            Harmony.DEBUG = true;
             Log.Warning("Neandertalica_DBH: Harmony patching");
             var harmony = new Harmony("Geel.NeandertallicaDBS");
             harmony.PatchAll();

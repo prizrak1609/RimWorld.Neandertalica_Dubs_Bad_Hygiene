@@ -237,3 +237,8 @@ $RECYCLE.BIN/
 # Rimworld specific
 _PublisherPlus.xml
 lastrun.log
+1.6/Assemblies/0DubCore.dll
+1.6/Assemblies/0Harmony.dll
+1.6/Assemblies/0MultiplayerAPI.dll
+1.6/Assemblies/BadHygiene.dll
+1.6/Assemblies/HugsLib.dll

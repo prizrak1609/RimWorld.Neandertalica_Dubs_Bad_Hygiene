@@ -44,6 +44,7 @@
 				<AutoOnRain>false</AutoOnRain>
 			</li>
 			<li Class="Neandertalica_DBH.CompProperties_WaterPit">
+				<WaterPerUse>0.01</WaterPerUse>
 				<Capacity>500</Capacity>
 				<Radius>7</Radius>
 				<Deep>false</Deep>

@@ -30,7 +30,7 @@ namespace Neandertalica_DBH
             Pawn pawn = this.InteractionCell.GetFirstPawn(this.Map);
             if (pawn != null && !pawn.Downed && !pawn.Dead && pawn.CurJob != null && pawn.CurJob.targetA.Thing == this)
             {
-                storage.WaterStorage -= 1f;
+                storage.WaterStorage -= waterPit.Props.WaterPerUse;
             }
         }
 

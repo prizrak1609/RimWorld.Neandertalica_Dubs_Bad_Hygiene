@@ -57,7 +57,7 @@
 		<statBases>
 			<MaxHitPoints>30</MaxHitPoints>
 			<Flammability>0.3</Flammability>
-			<WorkToBuild>2000</WorkToBuild>
+			<WorkToBuild>240</WorkToBuild>
 		</statBases>
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<defaultStuff>WoodLog</defaultStuff>

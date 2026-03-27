@@ -62,7 +62,7 @@
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<defaultStuff>WoodLog</defaultStuff>
 		<holdsRoof>false</holdsRoof>
-		<designationCategory>N_Neandertalo</designationCategory>
+		<designationCategory>Hygiene</designationCategory>
 		<uiOrder>10</uiOrder>
 		<staticSunShadowHeight>0</staticSunShadowHeight>
 		<blockLight>false</blockLight>

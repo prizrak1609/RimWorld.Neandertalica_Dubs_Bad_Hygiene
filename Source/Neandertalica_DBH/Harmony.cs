@@ -17,7 +17,7 @@ namespace Neandertalica_DBH
     {
         static HarmonyPatches()
         {
-            Log.Warning("Neandertalica_DBH: Harmony patching");
+            Log.Warning("Dubs Bad Hygiene Water Pit: Harmony patching");
             var harmony = new Harmony("Geel.NeandertallicaDBS");
             harmony.PatchAll();
         }

@@ -43,7 +43,7 @@ namespace Neandertalica_DBH
                     storage.WaterStorage -= waterPit.Props.WaterPerUse;
                 } else
                 {
-                    Log.ErrorOnce("Neandertalica_DBH: WaterPit has no CompWaterStorage.", postTickErrorKey);
+                    Log.ErrorOnce("Dubs Bad Hygiene Water Pit: WaterPit has no CompWaterStorage.", postTickErrorKey);
                 }
             }
         }
@@ -72,7 +72,7 @@ namespace Neandertalica_DBH
                 hasWater = storage.WaterStorage > 0;
             } else
             {
-                Log.ErrorOnce("Neandertalica_DBH: WaterPit has no CompWaterStorage.", workingErrorKey);
+                Log.ErrorOnce("Dubs Bad Hygiene Water Pit: WaterPit has no CompWaterStorage.", workingErrorKey);
             }
             return hasWater || base.Working(WaterUsed);
         }

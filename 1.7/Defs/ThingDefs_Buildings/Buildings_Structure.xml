@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	
+	<ThingDef Name="NeandertallWaterPit" ParentName="BasedHygieneMom">
+		<defName>N_WaterPit</defName>
+		<label>water pit</label>
+		<description>Pit of water</description>
+		<graphicData>
+			<texPath>Things/Building/Neandertallic/NeandertralWaterPit/NeandertalWaterPit</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+			<drawRotated>false</drawRotated>
+		</graphicData>
+		<thingClass>Neandertalica_DBH.WaterPit</thingClass>
+		<uiIconPath>Things/Building/Neandertallic/NeandertralWaterPit/NeandertalWaterPit</uiIconPath>
+		<tickerType>Normal</tickerType>
+		<category>Building</category>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<blockWind>false</blockWind>
+		<castEdgeShadows>false</castEdgeShadows>
+		<pathCost>60</pathCost>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>4</costStuffCount>
+		<placeWorkers>
+			<li>DubsBadHygiene.PlaceWorker_WaterGrid</li>
+			<li>PlaceWorker_InvalidOverSubstructure</li>
+		</placeWorkers>
+		<comps>
+			<li Class="DubsBadHygiene.CompProperties_Pipe">
+				<mode>Sewage</mode>
+			</li>
+			<li Class="DubsBadHygiene.CompProperties_WaterStorage">
+				<!-- <WaterStorageCap>0</WaterStorageCap> it is overriden by water pit Capacity -->
+				<AutoGenRate>0.6</AutoGenRate>
+				<Tickrate>60</Tickrate>
+				<Auto>true</Auto>
+				<AutoOnRain>false</AutoOnRain>
+			</li>
+			<li Class="Neandertalica_DBH.CompProperties_WaterPit">
+				<WaterPerUse>0.01</WaterPerUse>
+				<Capacity>500</Capacity>
+				<Radius>7</Radius>
+				<Deep>false</Deep>
+				<Piped>true</Piped>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>30</MaxHitPoints>
+			<Flammability>0.3</Flammability>
+			<WorkToBuild>240</WorkToBuild>
+		</statBases>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<defaultStuff>WoodLog</defaultStuff>
+		<holdsRoof>false</holdsRoof>
+		<designationCategory>Hygiene</designationCategory>
+		<uiOrder>10</uiOrder>
+		<staticSunShadowHeight>0</staticSunShadowHeight>
+		<blockLight>false</blockLight>
+		<canOverlapZones>false</canOverlapZones>
+		<fertility>0</fertility>
+	</ThingDef>
+
+</Defs>

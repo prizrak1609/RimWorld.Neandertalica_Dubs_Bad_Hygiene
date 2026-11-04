@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- IsoRim model binder export, 2026-11-04 01:24, IsoRim Api 50.
+     Model for N_WaterPit from: Neandertalica_Dubs_Bad_Hygiene\Models\water_pit.obj
+     No thingDef here: Patches/IsoRimBinder_N_WaterPit.xml adds them (see IsoRim's Docs/ModelPacks.md). -->
+<Defs>
+  <IsoRim.ModelDef>
+    <defName>R3D_N_WaterPit</defName>
+	<thingDef>N_WaterPit</thingDef>
+	<model>Models/water_pit.obj</model>
+    <scale>0.5</scale>
+    <groundShadow>false</groundShadow>
+    <builtFor>(1, 1)</builtFor>
+	<cutaway>Never</cutaway>
+	<surfaceHeight>0.00</surfaceHeight>
+	<sinkHole>1</sinkHole>
+  </IsoRim.ModelDef>
+</Defs>

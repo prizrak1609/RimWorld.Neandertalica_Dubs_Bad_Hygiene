@@ -242,3 +242,4 @@ lastrun.log
 1.6/Assemblies/0MultiplayerAPI.dll
 1.6/Assemblies/BadHygiene.dll
 1.6/Assemblies/HugsLib.dll
+!Models/*.obj

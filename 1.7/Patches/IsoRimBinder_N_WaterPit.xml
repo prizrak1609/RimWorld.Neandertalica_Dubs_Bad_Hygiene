@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Binds R3D_N_WaterPit to N_WaterPit when IsoRim has Api 2 or later (the fields it uses); an older IsoRim leaves the thing as it is. -->
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>2</minVersion>
+    <apply Class="PatchOperationAdd">
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_N_WaterPit"]</xpath>
+      <value><thingDef>N_WaterPit</thingDef></value>
+    </apply>
+  </Operation>
+</Patch>

@@ -111,7 +111,7 @@
 			</li>
 			<li Class="Neandertalica_DBH.CompProperties_WaterPit">
 				<WaterPerUse>0.01</WaterPerUse>
-				<ContaminationPercentPerSecond>0.01</ContaminationPercentPerSecond>
+				<ContaminationPercentPerSecond>0.06</ContaminationPercentPerSecond>
 				<Capacity>500</Capacity>
 				<Radius>7</Radius>
 				<Deep>false</Deep>

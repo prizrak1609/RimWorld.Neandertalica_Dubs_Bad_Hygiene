@@ -17,7 +17,7 @@ Adds pit with water so colonists could drink and wash themself on Animal colony 
 [*] Write in a comments
 [/list]
 	</description>
-	<modVersion IgnoreIfNoMatchingField="True">2.0.0</modVersion>
+	<modVersion IgnoreIfNoMatchingField="True">2.1.0</modVersion>
 	<modDependencies>
 		<li>
 			<packageId>dubwise.dubsbadhygiene</packageId>

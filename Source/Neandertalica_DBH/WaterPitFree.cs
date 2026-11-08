@@ -14,7 +14,7 @@ namespace Neandertalica_DBH
 {
     public class WaterPitFree: WaterPit
     {
-        private int contaminationLevel = 0;
+        private float contaminationLevel = 0;
         private const int ticksPerSecond = 60;
 
         public override ContaminationLevel ContaminationLevel
@@ -58,6 +58,21 @@ namespace Neandertalica_DBH
             {
                 contaminationLevel += waterPit.Props.ContaminationPercentPerSecond;
             }
+        }
+
+        public override void PostSpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(map, respawningAfterLoad);
+
+            if (storage != null)
+            {
+                storage.DidWaterDrain += didWaterDrain;
+            }
+        }
+
+        private void didWaterDrain()
+        {
+            contaminationLevel = 0;
         }
 
         public override void ExposeData()

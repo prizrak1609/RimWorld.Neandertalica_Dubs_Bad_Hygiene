@@ -17,7 +17,7 @@ namespace Neandertalica_DBH
     {
         static HarmonyPatches()
         {
-            Log.Warning("Dubs Bad Hygiene Water Pit: Harmony patching");
+            Log.Warning(LogUtils.CreateLogMessage("Harmony patching"));
             var harmony = new Harmony("Geel.NeandertallicaDBS");
             harmony.PatchAll();
         }
@@ -43,6 +43,18 @@ namespace Neandertalica_DBH
             if (__instance is IWaterPitBase instrance)
             {
                 instrance.PostSpawnSetup(map, respawningAfterLoad);
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(CompWaterStorage), "drain")]
+    public static class CompWaterStorage_drain
+    {
+        public static void Postfix(CompWaterStorage __instance)
+        {
+            if (__instance is WaterStorage instrance)
+            {
+                instrance.postDrain();
             }
         }
     }

@@ -12,5 +12,8 @@ namespace Neandertalica_DBH
     public class Defs
     {
         public static ThingDef N_WaterPit;
+        public static ThingDef N_FreeWaterPit;
+
+        public static ThingDef[] AllDefs => new ThingDef[2] { N_WaterPit, N_FreeWaterPit };
     }
 }

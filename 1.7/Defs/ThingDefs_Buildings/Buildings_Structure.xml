@@ -4,7 +4,7 @@
 	
 	<ThingDef Name="NeandertallWaterPit" ParentName="BasedHygieneMom">
 		<defName>N_WaterPit</defName>
-		<label>water pit</label>
+		<label>water pit with interior</label>
 		<description>Pit of water with interior decoration to prevent contamination</description>
 		<graphicData>
 			<texPath>Things/Building/Neandertallic/NeandertralWaterPit/NeandertalWaterPit</texPath>
@@ -36,12 +36,11 @@
 			<li Class="DubsBadHygiene.CompProperties_Pipe">
 				<mode>Sewage</mode>
 			</li>
-			<li Class="DubsBadHygiene.CompProperties_WaterStorage">
-				<!-- <WaterStorageCap>0</WaterStorageCap> it is overriden by water pit Capacity -->
+			<li Class="Neandertalica_DBH.CompProperties_WaterStorage">
 				<AutoGenRate>0.6</AutoGenRate>
 				<Tickrate>60</Tickrate>
 				<Auto>true</Auto>
-				<AutoOnRain>true</AutoOnRain>
+				<AutoOnRain>false</AutoOnRain>
 			</li>
 			<li Class="Neandertalica_DBH.CompProperties_WaterPit">
 				<WaterPerUse>0.01</WaterPerUse>
@@ -104,16 +103,15 @@
 			<li Class="DubsBadHygiene.CompProperties_Pipe">
 				<mode>Sewage</mode>
 			</li>
-			<li Class="DubsBadHygiene.CompProperties_WaterStorage">
-				<!-- <WaterStorageCap>0</WaterStorageCap> it is overriden by water pit Capacity -->
+			<li Class="Neandertalica_DBH.CompProperties_WaterStorage">
 				<AutoGenRate>0.6</AutoGenRate>
 				<Tickrate>60</Tickrate>
 				<Auto>true</Auto>
-				<AutoOnRain>true</AutoOnRain>
+				<AutoOnRain>false</AutoOnRain>
 			</li>
 			<li Class="Neandertalica_DBH.CompProperties_WaterPit">
 				<WaterPerUse>0.01</WaterPerUse>
-				<ContaminationPercentPerSecond>1</ContaminationPercentPerSecond>
+				<ContaminationPercentPerSecond>0.01</ContaminationPercentPerSecond>
 				<Capacity>500</Capacity>
 				<Radius>7</Radius>
 				<Deep>false</Deep>
@@ -130,6 +128,7 @@
 		</statBases>
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<defaultStuff>WoodLog</defaultStuff>
+		<resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
 		<holdsRoof>false</holdsRoof>
 		<designationCategory>Hygiene</designationCategory>
 		<uiOrder>10</uiOrder>

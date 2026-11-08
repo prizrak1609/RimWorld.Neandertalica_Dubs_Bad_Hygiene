@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompProperties_WaterPit.cs" />
+    <Compile Include="CompProperties_WaterStorage.cs" />
     <Compile Include="Defs.cs" />
     <Compile Include="Harmony.cs" />
     <Compile Include="LogUtils.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="WaterPitFree.cs" />
     <Compile Include="WaterPit.cs" />
     <Compile Include="WaterPitThingComp.cs" />
+    <Compile Include="WaterStorage.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Lib.Harmony">

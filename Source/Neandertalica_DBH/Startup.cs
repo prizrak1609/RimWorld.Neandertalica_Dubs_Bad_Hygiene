@@ -15,7 +15,11 @@ namespace Neandertalica_DBH
         static Startup()
         {
             Log.Message(LogUtils.CreateLogMessage("Starting"));
-            DefExtensions.FixtureDefs.Add(Defs.N_WaterPit);
+
+            foreach (ThingDef def in Defs.AllDefs)
+            {
+                DefExtensions.FixtureDefs.Add(def);
+            }
 
             if (VersionControl.CurrentMajor <= 1 && VersionControl.CurrentMinor < 7)
             {

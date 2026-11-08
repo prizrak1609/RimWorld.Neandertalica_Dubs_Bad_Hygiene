@@ -21,7 +21,7 @@ namespace Neandertalica_DBH
         private int workingErrorKey = 0;
 
         internal WaterPitThingComp waterPit;
-        internal CompWaterStorage storage;
+        internal WaterStorage storage;
 
         public WaterPit()
         {
@@ -42,12 +42,12 @@ namespace Neandertalica_DBH
                     storage.WaterStorage -= waterPit.Props.WaterPerUse;
                 } else
                 {
-                    Log.ErrorOnce("Dubs Bad Hygiene Water Pit: WaterPit has no CompWaterStorage.", postTickErrorKey);
+                    Log.ErrorOnce(LogUtils.CreateLogMessage("WaterPit has no CompWaterStorage"), postTickErrorKey);
                 }
             }
         }
 
-        public void PostSpawnSetup(Map map, bool respawningAfterLoad)
+        public virtual void PostSpawnSetup(Map map, bool respawningAfterLoad)
         {
             if (waterPit == null)
             {
@@ -56,7 +56,7 @@ namespace Neandertalica_DBH
 
             if (storage == null)
             {
-                storage = GetComp<CompWaterStorage>();
+                storage = GetComp<WaterStorage>();
                 storage.Props.WaterStorageCap = waterPit.Props.Capacity;
                 storage.DrainTank = false;
                 storage.WaterStorage = waterPit.Props.Capacity;
@@ -71,7 +71,7 @@ namespace Neandertalica_DBH
                 hasWater = storage.WaterStorage > 0;
             } else
             {
-                Log.ErrorOnce("Dubs Bad Hygiene Water Pit: WaterPit has no CompWaterStorage.", workingErrorKey);
+                Log.ErrorOnce(LogUtils.CreateLogMessage("WaterPit has no CompWaterStorage."), workingErrorKey);
             }
             return hasWater || base.Working(WaterUsed);
         }

@@ -10,7 +10,7 @@ namespace Neandertalica_DBH
     public class CompProperties_WaterPit: DubsBadHygiene.CompProperties_WaterInlet
     {
         public float WaterPerUse = 0.01f;
-        public int ContaminationPercentPerSecond = 1;
+        public float ContaminationPercentPerSecond = 1f;
         public CompProperties_WaterPit()
         {
             compClass = typeof(WaterPitThingComp);

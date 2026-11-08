@@ -9,4 +9,11 @@
 		</graphicData>
 	</ThingStyleDef>
 	
+	<ThingStyleDef>
+		<defName>N_FreeWaterPitStyle</defName>
+		<graphicData>
+			<texPath>Things/Building/Neandertallic/NeandertralWaterPit/FreeWaterPit</texPath>
+		</graphicData>
+	</ThingStyleDef>
+	
 </Defs>

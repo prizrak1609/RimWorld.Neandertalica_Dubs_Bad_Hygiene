@@ -59,8 +59,11 @@
     <Compile Include="CompProperties_WaterPit.cs" />
     <Compile Include="Defs.cs" />
     <Compile Include="Harmony.cs" />
+    <Compile Include="LogUtils.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IWaterPitBase.cs" />
+    <Compile Include="WaterPitFree.cs" />
     <Compile Include="WaterPit.cs" />
     <Compile Include="WaterPitThingComp.cs" />
   </ItemGroup>

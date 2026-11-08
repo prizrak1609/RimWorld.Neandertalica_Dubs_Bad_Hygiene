@@ -8,4 +8,12 @@
       <value><thingDef>N_WaterPit</thingDef></value>
     </apply>
   </Operation>
+  
+  <Operation Class="IsoRimPackGate.PatchOperation_IfIsoRimApi">
+    <minVersion>2</minVersion>
+    <apply Class="PatchOperationAdd">
+      <xpath>/Defs/IsoRim.ModelDef[defName="R3D_N_FreeWaterPit"]</xpath>
+      <value><thingDef>N_FreeWaterPit</thingDef></value>
+    </apply>
+  </Operation>
 </Patch>

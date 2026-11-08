@@ -12,7 +12,7 @@ using static HarmonyLib.Code;
 
 namespace Neandertalica_DBH
 {
-    public class WaterPit: Building_AssignableFixture
+    public class WaterPit: Building_AssignableFixture, IWaterPitBase
     {
         public override FixtureType fixture => FixtureType.Basin;
         public override bool DrawBrokenPipe => false;
@@ -20,14 +20,14 @@ namespace Neandertalica_DBH
         private int postTickErrorKey = 0;
         private int workingErrorKey = 0;
 
-        private WaterPitThingComp waterPit;
-        private CompWaterStorage storage;
+        internal WaterPitThingComp waterPit;
+        internal CompWaterStorage storage;
 
         public WaterPit()
         {
         }
 
-        public void PostTick()
+        public virtual void PostTick()
         {
             if (base.ParentHolder is MinifiedThing)
             {

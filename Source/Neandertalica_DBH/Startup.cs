@@ -1,4 +1,5 @@
 ﻿using DubsBadHygiene;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,15 @@ namespace Neandertalica_DBH
     {
         static Startup()
         {
-            Log.Message("Dubs Bad Hygiene Water Pit: Checking active mods.");
-            
+            Log.Message(LogUtils.CreateLogMessage("Starting"));
             DefExtensions.FixtureDefs.Add(Defs.N_WaterPit);
+
+            if (VersionControl.CurrentMajor <= 1 && VersionControl.CurrentMinor < 7)
+            {
+                Log.Error(LogUtils.CreateLogMessage("Water Pit that costs nothing will not be available in RimWorld version below 1.7"));
+            }
+
+            Log.Message(LogUtils.CreateLogMessage("Started successfully"));
         }
     }
 }

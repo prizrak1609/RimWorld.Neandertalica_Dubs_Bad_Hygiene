@@ -28,7 +28,7 @@ namespace Neandertalica_DBH
     {
         public static void Postfix(Building_AssignableFixture __instance)
         {
-            if (__instance is WaterPit instance)
+            if (__instance is IWaterPitBase instance)
             {
                 instance.PostTick();
             }
@@ -40,7 +40,7 @@ namespace Neandertalica_DBH
     {
         public static void Postfix(Building_AssignableFixture __instance, Map map, bool respawningAfterLoad)
         {
-            if (__instance is WaterPit instrance)
+            if (__instance is IWaterPitBase instrance)
             {
                 instrance.PostSpawnSetup(map, respawningAfterLoad);
             }

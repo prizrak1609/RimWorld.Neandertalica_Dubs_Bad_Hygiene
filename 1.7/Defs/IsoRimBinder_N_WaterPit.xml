@@ -14,4 +14,16 @@
 	<surfaceHeight>0.00</surfaceHeight>
 	<sinkHole>1</sinkHole>
   </IsoRim.ModelDef>
+  
+  <IsoRim.ModelDef>
+    <defName>R3D_N_FreeWaterPit</defName>
+	<thingDef>N_FreeWaterPit</thingDef>
+	<model>Models/free_water_pit.obj</model>
+    <scale>0.5</scale>
+    <groundShadow>false</groundShadow>
+    <builtFor>(1, 1)</builtFor>
+	<cutaway>Never</cutaway>
+	<surfaceHeight>0.00</surfaceHeight>
+	<sinkHole>1</sinkHole>
+  </IsoRim.ModelDef>
 </Defs>

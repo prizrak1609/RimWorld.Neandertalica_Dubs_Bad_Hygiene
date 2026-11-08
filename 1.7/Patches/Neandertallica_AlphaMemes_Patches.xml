@@ -17,6 +17,10 @@
 										<thingDef>N_WaterPit</thingDef>
 										<styleDef>N_WaterPitStyle</styleDef>
 									</li>
+									<li>
+										<thingDef>N_FreeWaterPit</thingDef>
+										<styleDef>N_FreeWaterPitStyle</styleDef>
+									</li>
 								</value>
 						</match>
 				</li>

@@ -1,0 +1,16 @@
+# Material Definition for Water Pit
+
+newmtl Free_Pit_Rim
+Kd 0.38 0.32 0.25
+Ka 0.20 0.20 0.20
+Ks 0.05 0.05 0.05
+Ns 10.0
+illum 2
+
+newmtl Free_Pit_Water
+Kd 0.15 0.45 0.65
+Ka 0.10 0.30 0.40
+Ks 0.80 0.80 0.80
+Ns 90.0
+d 0.85
+illum 2

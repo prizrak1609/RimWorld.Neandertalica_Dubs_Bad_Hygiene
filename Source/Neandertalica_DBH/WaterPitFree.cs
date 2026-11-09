@@ -17,19 +17,6 @@ namespace Neandertalica_DBH
         private float contaminationLevel = 0;
         private const int ticksPerSecond = 60;
 
-        public override ContaminationLevel ContaminationLevel
-        {
-            get
-            {
-                if (contaminationLevel >= 100)
-                {
-                    return ContaminationLevel.Contaminated;
-                }
-
-                return ContaminationLevel.Untreated;
-            }
-        }
-
         public WaterPitFree()
         {
         }
@@ -57,6 +44,12 @@ namespace Neandertalica_DBH
             if (contaminationLevel < 100)
             {
                 contaminationLevel += SettingsUI.Settings.ContaminationPercentPerSecond;
+            }
+
+            if (contaminationLevel >= 100)
+            {
+                contaminationLevel = 100f;
+                storage.contam();
             }
         }
 

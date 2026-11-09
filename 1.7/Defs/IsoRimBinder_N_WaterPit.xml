@@ -13,6 +13,7 @@
 	<cutaway>Never</cutaway>
 	<surfaceHeight>0.00</surfaceHeight>
 	<sinkHole>1</sinkHole>
+	<offset>(0, 0, 0.64)</offset>
   </IsoRim.ModelDef>
   
   <IsoRim.ModelDef>

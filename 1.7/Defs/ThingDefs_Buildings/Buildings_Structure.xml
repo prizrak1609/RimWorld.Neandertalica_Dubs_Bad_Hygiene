@@ -42,13 +42,6 @@
 				<Auto>true</Auto>
 				<AutoOnRain>false</AutoOnRain>
 			</li>
-			<li Class="Neandertalica_DBH.CompProperties_WaterPit">
-				<WaterPerUse>0.01</WaterPerUse>
-				<Capacity>500</Capacity>
-				<Radius>7</Radius>
-				<Deep>false</Deep>
-				<Piped>true</Piped>
-			</li>
 			<li Class="CompProperties_Forbiddable"/>
 		</comps>
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
@@ -108,14 +101,6 @@
 				<Tickrate>60</Tickrate>
 				<Auto>true</Auto>
 				<AutoOnRain>false</AutoOnRain>
-			</li>
-			<li Class="Neandertalica_DBH.CompProperties_WaterPit">
-				<WaterPerUse>0.01</WaterPerUse>
-				<ContaminationPercentPerSecond>0.06</ContaminationPercentPerSecond>
-				<Capacity>500</Capacity>
-				<Radius>7</Radius>
-				<Deep>false</Deep>
-				<Piped>true</Piped>
 			</li>
 			<li Class="CompProperties_Forbiddable"/>
 		</comps>

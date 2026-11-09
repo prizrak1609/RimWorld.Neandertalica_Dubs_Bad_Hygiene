@@ -56,7 +56,7 @@ namespace Neandertalica_DBH
 
             if (contaminationLevel < 100)
             {
-                contaminationLevel += waterPit.Props.ContaminationPercentPerSecond;
+                contaminationLevel += SettingsUI.Settings.ContaminationPercentPerSecond;
             }
         }
 
@@ -95,7 +95,7 @@ namespace Neandertalica_DBH
                 stringBuilder.AppendLine();
             }
 
-            stringBuilder.Append($"Contamination Level: {contaminationLevel}%");
+            stringBuilder.Append($"Contamination Level: {contaminationLevel:F2}%");
 
             return stringBuilder.ToString().TrimEndNewlines();
         }
